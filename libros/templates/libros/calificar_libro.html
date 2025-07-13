@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="bg-dark p-5 rounded shadow-lg">
+    <h2 class="text-center text-gradient mb-4">⭐ Calificar: <span class="fw-bold">{{ libro.nombre }}</span></h2>
+
+    <form method="post" class="row g-4">
+      {% csrf_token %}
+
+      <div class="col-12 col-md-6">
+        <label for="puntuacion" class="form-label">🌟 Puntuación (1-5)</label>
+        <input type="number" name="puntuacion" class="form-control rounded-pill" min="1" max="5" required>
+      </div>
+
+      <div class="col-12">
+        <label for="comentario" class="form-label">📝 Comentario</label>
+        <textarea name="comentario" class="form-control rounded-4" rows="4" placeholder="Escribí tu opinión..."></textarea>
+      </div>
+
+      <div class="col-12 text-center mt-3">
+        <button type="submit" class="btn btn-outline-success px-5 py-2 rounded-pill transition">
+          <i class="bi bi-send-fill me-2"></i>Enviar Calificación
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .transition {
+    transition: all 0.3s ease-in-out;
+  }
+  .transition:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 255, 149, 0.2);
+  }
+</style>
+{% endblock %}

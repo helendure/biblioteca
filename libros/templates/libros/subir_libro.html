@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="bg-dark p-5 rounded shadow-lg">
+    <h2 class="text-center text-gradient mb-4">📘 Subir Nuevo Libro</h2>
+    
+    <form method="post" enctype="multipart/form-data" class="row g-3">
+      {% csrf_token %}
+
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">📖 Nombre del libro</label>
+        {{ form.nombre }}
+      </div>
+
+      <div class="col-md-6">
+        <label for="autor" class="form-label">👤 Autor</label>
+        {{ form.autor }}
+      </div>
+
+      <div class="col-md-6">
+        <label for="genero" class="form-label">🎭 Género</label>
+        {{ form.genero }}
+      </div>
+
+      <div class="col-md-6">
+        <label for="fecha_lanzamiento" class="form-label">📅 Fecha de lanzamiento</label>
+        {{ form.fecha_lanzamiento }}
+      </div>
+
+      <div class="col-12">
+        <label for="archivo_pdf" class="form-label">📄 Archivo PDF</label>
+        {{ form.archivo_pdf }}
+      </div>
+
+      <div class="col-12 text-center mt-4">
+        <button type="submit" class="btn btn-outline-info px-5 py-2 rounded-pill transition">
+          <i class="bi bi-save me-2"></i>Guardar Libro
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .transition {
+    transition: all 0.3s ease-in-out;
+  }
+  .transition:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.25);
+  }
+</style>
+{% endblock %}
