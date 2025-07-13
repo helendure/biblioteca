@@ -1,5 +1,5 @@
 
-# 📚 Biblioteca — Proyecto Django Visual 2025
+# 📚 Biblioteca — Proyecto Django 
 
 Proyecto desarrollado en Django que permite a los usuarios:
 
@@ -12,7 +12,7 @@ Proyecto desarrollado en Django que permite a los usuarios:
 
 ---
 
-## 🚀 Instalación Paso a Paso
+##  Instalación Paso a Paso
 
 1. **Clonar el repositorio:**
 
@@ -35,7 +35,7 @@ source env/bin/activate   # Linux/macOS
 pip install -r requirements.txt
 ```
 
-*Si no tenés `requirements.txt`, instalá manualmente:*
+
 
 ```bash
 pip install django djangorestframework djangorestframework-simplejwt pandas
@@ -110,7 +110,7 @@ Endpoints protegidos con JWT para administración y consumo desde Postman u otra
   - Libro con mejor puntuación.
   - Distribución de valoraciones por autor y género.
 
-*Los gráficos pueden visualizarse y exportarse usando Google Colab o Jupyter Notebooks.*
+
 
 ---
 
@@ -157,13 +157,4 @@ BIBLIOTECA/
 - Pandas: BSD  
 - Django REST Framework: BSD
 
----
 
-## ✨ Créditos
-
-- Proyecto desarrollado y estilizado en 2025 por el equipo de desarrollo.  
-- Asistencia técnica con IA para diseño y desarrollo funcional.
-
----
-
-**¡Gracias por usar Biblioteca!**
